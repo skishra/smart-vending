@@ -1,8 +1,9 @@
-package org.example2;
+package com.skrahaman;
 
 public class Donut extends Snack{
+
     @Override
-    public Snack bought() {
+    public Snack bought(int quantity) {
         return null;
     }
 
