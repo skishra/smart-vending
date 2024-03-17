@@ -2,6 +2,7 @@ package com.skrahaman;
 // just one column of the same snack should be stacks
 // a linked list of stacks?
 // no, an arraylist of stacks
+//
 public abstract class Snack implements Purchase{
     private String name;
     private double price;
