@@ -1,5 +1,7 @@
 package com.skrahaman;
 
+import java.util.Arrays;
+
 public class VendingMachine {
     private SlotQueue[][] slots;
     public int numRows;
@@ -25,5 +27,16 @@ public class VendingMachine {
 
     public Snack vend(int row, int column) {
         return slots[row][column].dequeue();
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < numRows; i++) {
+            for (int j = 0; j < numColumns; j++) {
+                sb.append(slots[i][j].toString());
+            }
+        }
+        return sb.toString();
     }
 }

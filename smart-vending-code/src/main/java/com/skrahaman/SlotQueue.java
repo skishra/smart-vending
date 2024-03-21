@@ -1,29 +1,31 @@
 package com.skrahaman;
 
+import java.util.Iterator;
+import java.util.LinkedList;
+
 public class SlotQueue {
-    private LinkedQueue<Snack> list;
+    private LinkedList<Snack> linkedList = new LinkedList<>();
     private Snack designatedSnack;
 
     public SlotQueue() {
-        list = new LinkedQueue<>();
     }
 
     public Snack first() {
-        return list.first();
+        return linkedList.getFirst();
     }
 
     public void enqueue(Snack snack) {
         if (size() == 0) {
-            list.enqueue(snack);
+            linkedList.add(snack);
             designatedSnack = snack;
 
         } else if (designatedSnack.toString().equals(snack.toString())) {
-            list.enqueue(snack);
+            linkedList.add(snack);
         }
     }
 
     public Snack dequeue() {
-        Snack temp = list.dequeue();
+        Snack temp = linkedList.removeLast();
         if (size() == 0) {
             designatedSnack = null;
         }
@@ -31,10 +33,24 @@ public class SlotQueue {
     }
 
     public int size() {
-        return list.size();
+        return linkedList.size();
     }
 
     public boolean isEmpty() {
-        return list.isEmpty();
+        return linkedList.isEmpty();
+    }
+
+    @Override
+    public String toString() {
+        Iterator<Snack> iterator = linkedList.iterator();
+        if (!iterator.hasNext()) {
+            return "";
+        }
+
+        StringBuilder sb = new StringBuilder();
+        while(iterator.hasNext()) {
+            sb.append(iterator.next());
+        }
+        return sb.toString();
     }
 }
