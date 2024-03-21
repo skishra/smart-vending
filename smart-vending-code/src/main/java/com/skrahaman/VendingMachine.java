@@ -2,6 +2,8 @@ package com.skrahaman;
 
 public class VendingMachine {
     private SlotQueue[][] slots;
+    public int numRows;
+    public int numColumns;
 
     public VendingMachine(int numRows, int numColumns) {
         slots = new SlotQueue[numRows][numColumns];
@@ -11,10 +13,14 @@ public class VendingMachine {
                 slots[i][j] = new SlotQueue();
             }
         }
+        this.numRows = numRows;
+        this.numColumns = numColumns;
     }
 
-    public void restock(String name, double price, int row, int column) {
-        slots[row][column].enqueue(new Snack(name, price));
+    public void restock(Snack snack, int row, int column) {
+        if (row <= numRows && column <= numColumns) {
+            slots[row][column].enqueue(snack);
+        }
     }
 
     public Snack vend(int row, int column) {
