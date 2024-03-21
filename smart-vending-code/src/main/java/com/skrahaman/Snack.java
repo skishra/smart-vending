@@ -8,4 +8,12 @@ public abstract class Snack {
         this.name = name;
         this.price = price;
     }
+
+    @Override
+    public String toString() {
+        return "Snack{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }
