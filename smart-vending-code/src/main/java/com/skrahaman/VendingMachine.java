@@ -13,5 +13,11 @@ public class VendingMachine {
         }
     }
 
+    public void restock(String name, double price, int row, int column) {
+        slots[row][column].enqueue(new Snack(name, price));
+    }
 
+    public Snack vend(int row, int column) {
+        return slots[row][column].dequeue();
+    }
 }

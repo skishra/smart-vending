@@ -14,9 +14,10 @@ public class SlotQueue {
 
     public void enqueue(Snack snack) {
         if (size() == 0) {
+            list.enqueue(snack);
             designatedSnack = snack;
-        }
-        if (designatedSnack.toString().equals(snack.toString())) {
+
+        } else if (designatedSnack.toString().equals(snack.toString())) {
             list.enqueue(snack);
         }
     }

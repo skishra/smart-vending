@@ -1,6 +1,6 @@
 package com.skrahaman;
 
-public abstract class Snack {
+public class Snack {
     private String name;
     private double price;
 
