@@ -6,6 +6,12 @@ public class Test {
 
         vm1.restock(new Chips("Lays 1oz.", 0.99), 0, 0);
 
+        System.out.println(vm1);
+
+        vm1.restock(new Chips("Lays 1oz.", 0.99), 0, 0);
+
+        System.out.println(vm1);
+
         System.out.println(vm1.vend(0, 0));
 
         System.out.println(vm1);

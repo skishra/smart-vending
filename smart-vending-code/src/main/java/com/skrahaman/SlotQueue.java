@@ -1,5 +1,6 @@
 package com.skrahaman;
 
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedList;
 
@@ -42,15 +43,6 @@ public class SlotQueue {
 
     @Override
     public String toString() {
-        Iterator<Snack> iterator = linkedList.iterator();
-        if (!iterator.hasNext()) {
-            return "";
-        }
-
-        StringBuilder sb = new StringBuilder();
-        while(iterator.hasNext()) {
-            sb.append(iterator.next());
-        }
-        return sb.toString();
+        return Arrays.toString(linkedList.toArray());
     }
 }
