@@ -1,14 +1,8 @@
 package com.skrahaman;
-//
-public class Donut extends Snack{
 
-    @Override
-    public Snack bought(int quantity) {
-        return null;
-    }
+public class Donut extends Snack {
 
-    @Override
-    public void restock(int quantity) {
-
+    public Donut(String name, double price) {
+        super(name, price);
     }
 }
