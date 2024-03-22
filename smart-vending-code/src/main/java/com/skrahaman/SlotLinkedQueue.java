@@ -1,15 +1,11 @@
 package com.skrahaman;
 
 import java.util.Arrays;
-import java.util.Iterator;
 import java.util.LinkedList;
 
-public class SlotQueue {
+public class SlotLinkedQueue {
     private LinkedList<Snack> linkedList = new LinkedList<>();
     private Snack designatedSnack;
-
-    public SlotQueue() {
-    }
 
     public Snack first() {
         return linkedList.getFirst();
