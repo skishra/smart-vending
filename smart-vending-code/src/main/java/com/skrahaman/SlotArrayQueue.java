@@ -39,6 +39,7 @@ public class SlotArrayQueue {
 
         if (size() == 0) {
             designatedSnack = null;
+            front = 0;
         }
         return temp;
     }
@@ -54,14 +55,16 @@ public class SlotArrayQueue {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
+        sb.append("[");
         for (int i = 0; i < array.length; i++) {
             if (array[i] != null) {
-                sb.append(String.format("[%20s] ", array[i].toString()));
+                sb.append(String.format("%20s", array[i].toString()));
             } else {
-                sb.append(String.format("[%20s] ", ""));
+                sb.append(String.format("%20s", ""));
             }
 
         }
+        sb.append("]");
         return sb.toString();
     }
 }
