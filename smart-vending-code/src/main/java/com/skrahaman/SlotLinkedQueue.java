@@ -5,19 +5,25 @@ import java.util.LinkedList;
 
 public class SlotLinkedQueue {
     private LinkedList<Snack> linkedList = new LinkedList<>();
+    private int depth;
     private Snack designatedSnack;
+
+    public SlotLinkedQueue(int depth) {
+        this.depth = depth;
+    }
 
     public Snack first() {
         return linkedList.getFirst();
     }
 
     public void enqueue(Snack snack) {
-        if (size() == 0) {
-            linkedList.add(snack);
-            designatedSnack = snack;
-
-        } else if (designatedSnack.toString().equals(snack.toString())) {
-            linkedList.add(snack);
+        if (size() != depth) {
+            if (size() == 0) {
+                designatedSnack = snack;
+                linkedList.add(snack);
+            } else if (designatedSnack.toString().equals(snack.toString())) {
+                linkedList.add(snack);
+            }
         }
     }
 

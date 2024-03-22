@@ -1,17 +1,17 @@
 package com.skrahaman;
 
 public class VendingMachine {
-    private SlotArrayQueue[][] slots;
+    private SlotLinkedQueue[][] slots;
     private int numRows;
     private int numColumns;
     private int depth;
 
     public VendingMachine(int numRows, int numColumns, int depth) {
-        slots = new SlotArrayQueue[numRows][numColumns];
+        slots = new SlotLinkedQueue[numRows][numColumns];
 
         for (int i = 0; i < numRows; i++) {
             for (int j = 0; j < numColumns; j++) {
-                slots[i][j] = new SlotArrayQueue(depth);
+                slots[i][j] = new SlotLinkedQueue(depth);
             }
         }
 
