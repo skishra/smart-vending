@@ -1,7 +1,5 @@
 package com.skrahaman;
 
-import java.util.Arrays;
-
 public class SlotArrayQueue {
     private Snack[] array;
     private Snack designatedSnack;
