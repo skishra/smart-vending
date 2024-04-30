@@ -14,17 +14,6 @@ public class BinaryTree<E extends Comparable<E>> implements Iterable<E> {
         this.root = new TreeNode<>(element);
     }
 
-    public BinaryTree(TreeNode<E> root) {
-        this.root = root;
-    }
-
-    public BinaryTree(TreeNode<E> root, BinaryTree<E> leftTree, BinaryTree<E> rightTree) {
-        this.root = root;
-
-        this.root.setLeft(leftTree.root);
-        this.root.setRight(rightTree.root);
-    }
-
     public TreeNode<E> find(E element) {
         return find(element, root);
     }

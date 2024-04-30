@@ -9,14 +9,6 @@ public class BinarySearchTree<E extends Comparable<E>> extends BinaryTree<E> {
         super(element);
     }
 
-    public BinarySearchTree(TreeNode<E> root) {
-        super(root);
-    }
-
-    public BinarySearchTree(TreeNode<E> root, BinaryTree<E> leftTree, BinaryTree<E> rightTree) {
-        super(root, leftTree, rightTree);
-    }
-
     public TreeNode<E> add(E element) {
         return add(element, getRoot());
     }

@@ -25,3 +25,4 @@ replay_pid*
 /smart-vending-code/target/
 /smart-vending-code/pom.xml
 /smart-vending-code/smart-vending-code.iml
+/.idea/
