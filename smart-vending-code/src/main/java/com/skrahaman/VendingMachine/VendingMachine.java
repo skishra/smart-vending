@@ -1,4 +1,4 @@
-package com.skrahaman;
+package com.skrahaman.VendingMachine;
 
 public class VendingMachine {
     private SlotLinkedQueue[][] slots;

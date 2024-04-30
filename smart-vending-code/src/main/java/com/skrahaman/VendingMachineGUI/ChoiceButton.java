@@ -1,4 +1,4 @@
-package com.skrahaman;
+package com.skrahaman.VendingMachineGUI;
 
 import javax.swing.*;
 import java.awt.event.ActionListener;

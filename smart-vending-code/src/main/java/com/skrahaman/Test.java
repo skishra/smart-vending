@@ -1,5 +1,9 @@
 package com.skrahaman;
 
+import com.skrahaman.VendingMachine.Chips;
+import com.skrahaman.VendingMachine.Donut;
+import com.skrahaman.VendingMachine.VendingMachine;
+
 public class Test {
     public static void main(String[] args) {
         VendingMachine vm1 = new VendingMachine(3, 3, 2);

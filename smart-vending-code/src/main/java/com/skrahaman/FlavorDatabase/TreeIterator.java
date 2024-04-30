@@ -1,4 +1,4 @@
-package com.skrahaman;
+package com.skrahaman.FlavorDatabase;
 
 import java.util.Iterator;
 
@@ -14,9 +14,8 @@ public class TreeIterator<E> implements Iterator<E> {
     }
 
     public E next() {
-        if (!hasNext()) {
-            return null;
-        }
-        return iterator.next();
+        if (hasNext())
+            return iterator.next();
+        else return null;
     }
 }

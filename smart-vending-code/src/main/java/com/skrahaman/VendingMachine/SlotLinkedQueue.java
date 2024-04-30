@@ -1,4 +1,4 @@
-package com.skrahaman;
+package com.skrahaman.VendingMachine;
 
 import java.util.Arrays;
 import java.util.LinkedList;
