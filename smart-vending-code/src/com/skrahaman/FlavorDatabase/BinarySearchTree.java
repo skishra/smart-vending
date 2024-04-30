@@ -18,9 +18,7 @@ public class BinarySearchTree<E extends Comparable<E>> extends BinaryTree<E> {
     }
 
     public TreeNode<E> add(E element) {
-        TreeNode<E> temp = add(element, getRoot());
-
-        return temp;
+        return add(element, getRoot());
     }
 
     private TreeNode<E> add(E element, TreeNode<E> node) {

@@ -23,3 +23,5 @@
 hs_err_pid*
 replay_pid*
 /smart-vending-code/target/
+/smart-vending-code/pom.xml
+/smart-vending-code/smart-vending-code.iml
