@@ -1,7 +1,9 @@
 package com.skrahaman.VendingMachine;
 
-public class Chips extends Snack {
-    public Chips(String name, double price) {
-        super(name, price);
+import java.util.Date;
+
+public class Chips extends FoodSnack {
+    public Chips(String name, double price, Date expirationDate, FoodSnackFlavorProfile foodSnackFlavorProfile) {
+        super(name, price, expirationDate, foodSnackFlavorProfile);
     }
 }
