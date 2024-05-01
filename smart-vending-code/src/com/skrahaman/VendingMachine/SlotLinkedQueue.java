@@ -6,7 +6,7 @@ import java.util.LinkedList;
 public class SlotLinkedQueue {
     private LinkedList<Snack> linkedList = new LinkedList<>();
     private int depth;
-    private Snack designatedSnack;
+    private Snack previouslyAddedSnack;
 
     public SlotLinkedQueue(int depth) {
         this.depth = depth;
@@ -19,9 +19,9 @@ public class SlotLinkedQueue {
     public void enqueue(Snack snack) {
         if (size() != depth) {
             if (size() == 0) {
-                designatedSnack = snack;
                 linkedList.add(snack);
-            } else if (designatedSnack.toString().equals(snack.toString())) {
+                previouslyAddedSnack = snack;
+            } else if (previouslyAddedSnack.toString().equals(snack.toString())) {
                 linkedList.add(snack);
             }
         }
@@ -30,7 +30,7 @@ public class SlotLinkedQueue {
     public Snack dequeue() {
         Snack temp = linkedList.removeLast();
         if (size() == 0) {
-            designatedSnack = null;
+            previouslyAddedSnack = null;
         }
         return temp;
     }
