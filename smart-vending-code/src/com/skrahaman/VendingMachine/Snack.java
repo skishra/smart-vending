@@ -19,6 +19,10 @@ public class Snack implements Comparable<Snack>{
         return name;
     }
 
+    public FlavorProfile getFlavorProfile() {
+        return flavorProfile;
+    }
+
     @Override
     public String toString() {
         return String.format("%s $%.2f", name, price);

@@ -2,12 +2,13 @@ package com.skrahaman.VendingMachine;
 
 import com.skrahaman.FlavorDatabase.BinarySearchTree;
 
+import java.util.Arrays;
+
 public class VendingMachine {
     private SlotLinkedQueue[][] slots;
     private int numRows;
     private int numColumns;
     private int depth;
-    protected BinarySearchTree<String> flavorTree;
 
     public VendingMachine(int numRows, int numColumns, int depth) {
         slots = new SlotLinkedQueue[numRows][numColumns];
@@ -30,9 +31,47 @@ public class VendingMachine {
             }
         }
     }
+    public Snack vend(String snackName) {
+        int[] rowAndColumn = getDigits(find(snackName));
+        vend(rowAndColumn[0], rowAndColumn[1]);
+    }
 
-    public Snack vend(int row, int column) {
+    private int find(String snackName) {
+        for (int i = 0; i < numRows; i++) {
+            for (int j = 0; j < numColumns; j++) {
+                if (slots[i][j].first().getName().equalsIgnoreCase(snackName)) {
+                    return (i*10)+j;
+                }
+            }
+        }
+    }
+
+    private static int[] getDigits(int number) {
+        String numStr = String.valueOf(number);
+
+        int[] digits = new int[numStr.length()];
+
+        for (int i = 0; i < numStr.length(); i++) {
+            digits[i] = Character.getNumericValue(numStr.charAt(i));
+        }
+
+        return digits;
+    }
+
+    private Snack vend(int row, int column) {
         return slots[row][column].dequeue();
+    }
+
+    public int getNumRows() {
+        return numRows;
+    }
+
+    public int getNumColumns() {
+        return numColumns;
+    }
+
+    public SlotLinkedQueue[][] getSlots() {
+        return slots;
     }
 
     @Override
