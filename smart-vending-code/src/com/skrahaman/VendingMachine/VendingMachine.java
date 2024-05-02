@@ -8,7 +8,7 @@ public class VendingMachine {
     private int numRows;
     private int numColumns;
     private int depth;
-    public BinaryTree<String> flavorTree = new BinaryTree<>();
+    public static BinaryTree<String> flavorTree = new BinaryTree<>();
 
     public VendingMachine(int numRows, int numColumns, int depth) {
         slots = new SlotLinkedQueue[numRows][numColumns];

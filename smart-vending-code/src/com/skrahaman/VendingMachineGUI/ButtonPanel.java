@@ -7,18 +7,18 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 
 public class ButtonPanel extends JPanel {
-    public TreeNode<String> snackFlavorRootNode = VendingMachine
-//    public FlavorButton flavor1 = new FlavorButton() {
-//        @Override
-//        public void actionPerformed(ActionEvent e) {
-//            super.actionPerformed(e);
-//        }
-//    };
-//
-//    public FlavorButton flavor2 = new FlavorButton() {
-//        @Override
-//        public void actionPerformed(ActionEvent e) {
-//            super.actionPerformed(e);
-//        }
-//    };
+    public TreeNode<String> snackFlavorRootNode = VendingMachine.flavorTree.getRoot();
+    public FlavorButton left = new FlavorButton(100, 50) {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            super.actionPerformed(e);
+        }
+    };
+
+    public FlavorButton right = new FlavorButton(300, 50) {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            super.actionPerformed(e);
+        }
+    };
 }
