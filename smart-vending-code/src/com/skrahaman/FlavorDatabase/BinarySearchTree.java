@@ -27,9 +27,9 @@ public class BinarySearchTree<E extends Comparable<E>> extends BinaryTree<E> {
         }
     }
 
-    private TreeNode<E> balance(TreeNode<E> node) {
-
-    }
+//    private TreeNode<E> balance(TreeNode<E> node) {
+//
+//    }
 
     private TreeNode<E> rotateRight(TreeNode<E> node) {
         TreeNode<E> temp = node.getLeft();

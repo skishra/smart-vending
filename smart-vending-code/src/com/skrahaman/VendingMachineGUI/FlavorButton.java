@@ -5,11 +5,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public abstract class FlavorButton extends JButton implements ActionListener {
+    public String leftOrRight;
     public void actionPerformed(ActionEvent e) {
 
     }
 
-    FlavorButton(int x, int y) {
+    FlavorButton(String leftOrRight, int x, int y) {
+        this.leftOrRight = leftOrRight;
         start(x, y);
     }
     private void start(int x, int y) {

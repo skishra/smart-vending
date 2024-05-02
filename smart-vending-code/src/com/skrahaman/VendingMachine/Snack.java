@@ -6,21 +6,27 @@ public class Snack implements Comparable<Snack>{
     private String name;
     private double price;
     private Date expirationDate;
-    private FlavorProfile flavorProfile;
+    private String foodOrDrink;
+    private final String flavor;
 
-    public Snack(String name, double price, Date expirationDate, FlavorProfile flavorProfile) {
+    public Snack(String name, double price, Date expirationDate, String foodOrDrink, String flavor) {
         this.name = name;
         this.price = price;
         this.expirationDate = expirationDate;
-        this.flavorProfile = flavorProfile;
+        this.flavor = flavor;
     }
 
     public String getName() {
         return name;
     }
 
-    public FlavorProfile getFlavorProfile() {
-        return flavorProfile;
+
+    public String getFlavor() {
+        return flavor;
+    }
+
+    public String getFoodOrDrink () {
+        return foodOrDrink;
     }
 
     @Override
