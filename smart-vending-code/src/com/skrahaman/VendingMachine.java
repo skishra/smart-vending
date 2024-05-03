@@ -4,7 +4,7 @@ public class VendingMachine {
     public TreeNode root;
 
     public VendingMachine() {
-        root = new TreeNode(new Snack("Root", true, false));
+        root = new TreeNode(new Snack("Snack", true, false));
         TreeNode foodNode = new TreeNode(new Snack("Food", true, false));
         TreeNode drinkNode = new TreeNode(new Snack("Drink", false, false));
         root.left = foodNode;

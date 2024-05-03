@@ -18,6 +18,7 @@ public class VendingMachineGUI {
         frame = new JFrame("Vending Machine");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(285, 150);
+        frame.setResizable(false);
 
         currentNode = machine.root;
         rootNode = machine.root;
