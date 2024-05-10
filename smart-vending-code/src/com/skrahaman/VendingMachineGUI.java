@@ -68,7 +68,7 @@ public class VendingMachineGUI {
     private void updateButtons() {
         currentLabel.setText("Subcategory: " + currentNode);
         if (currentNode.left != null) {
-            if (currentNode.left.data.isRealSnack) {
+            if (currentNode.left.snack.isRealSnack) {
                 currentLabel.setText("You got: " + currentNode.left + "!");
                 leftButton.setVisible(false);
                 rightButton.setVisible(false);
@@ -82,7 +82,7 @@ public class VendingMachineGUI {
         }
 
         if (currentNode.right != null) {
-            if (currentNode.right.data.isRealSnack) {
+            if (currentNode.right.snack.isRealSnack) {
                 currentLabel.setText("You got: " + currentNode.right + "!");
                 rightButton.setVisible(false);
                 leftButton.setVisible(false);

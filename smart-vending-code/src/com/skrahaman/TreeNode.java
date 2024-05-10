@@ -1,16 +1,16 @@
 package com.skrahaman;
 
 public class TreeNode {
-    public Snack data;
+    public Snack snack;
     public TreeNode left;
     public TreeNode right;
 
-    public TreeNode(Snack data) {
-        this.data = data;
+    public TreeNode(Snack snack) {
+        this.snack = snack;
     }
 
     @Override
     public String toString() {
-        return data.toString();
+        return snack.toString();
     }
 }
